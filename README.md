@@ -1,2 +1,2 @@
 [![version](https://img.shields.io/github/package-json/v/invermn/portfolio)](https://github.com/invermn/portfolio) [![Netlify Status](https://api.netlify.com/api/v1/badges/1c406493-f410-430e-b24e-1ec270eb3740/deploy-status)](https://app.netlify.com/sites/inver-portfolio/deploys) 
-[![svg header](https://svg-banners.vercel.app/api?type=luminance&text1=Inver's%20Portfolio&width=800&height=400)](https://github.com/Akshay090/svg-banners)
+[![svg header](https://svg-banners.vercel.app/api?type=luminance&text1=Inver's%20Portfolio&width=800&height=300)](https://github.com/Akshay090/svg-banners)
