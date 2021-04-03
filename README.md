@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1c406493-f410-430e-b24e-1ec270eb3740/deploy-status)](https://app.netlify.com/sites/inver-portfolio/deploys)
