@@ -1,0 +1,10 @@
+.personalinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    position: static;
+    border-radius: 15px;
+    flex: 1 1 100%;
+    width: 270px;
+}

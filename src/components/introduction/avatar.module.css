@@ -1,0 +1,31 @@
+.avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: static;
+
+    padding: 5px;
+
+    border: 5px solid #949494;
+    box-sizing: border-box;
+    border-radius: 1000px;
+
+    flex: 1 1 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+    position: static;
+    width: 150px;
+    height: 150px;
+
+    background: #C9C9C9;
+    border-radius: 1000px;
+
+    overflow: hidden;
+}
