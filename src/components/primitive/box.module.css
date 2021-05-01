@@ -1,0 +1,26 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    width: fit-content;
+    height: 50px;
+
+    background: #000000;
+    color: white;
+    padding: 0 12.5px;
+    flex: 1 1 100%;
+}
+
+.sharp {
+    border-radius: 0px;
+}
+
+.rounded {
+    border-radius: 6px;
+}
+
+.circle {
+    border-radius: 50px;
+}
