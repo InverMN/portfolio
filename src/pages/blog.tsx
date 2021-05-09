@@ -19,11 +19,10 @@ class BlogIndex extends React.Component<PageProps> {
 
     return (
       <div className={root}>
-        { traits.map(trait => <h2>{trait.name}</h2>) }
         {/* <div className={introductionwrapper}>
           <Introduction />
         </div> */}
-        <SkillsGraph 
+        <SkillsGraph
           traitList={traits}
           projectList={projects}
         />
