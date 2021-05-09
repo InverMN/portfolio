@@ -57,10 +57,10 @@ function findNodeProjects(node: Node, allProjects: Project[]): Project[] {
 
 
 function appendNodesParents(partialAppNodes: BindinglessAppNode[], edges: Edge[]): ChildlessAppNode[] {
-    return partialAppNodes.map(partialAppNode => ({
-        ...partialAppNode,
-        parent: findAppNodeParent(partialAppNode, edges, partialAppNodes),
-    }))
+    return partialAppNodes.map(partialAppNode  => {
+        (partialAppNode as ChildlessAppNode).parent = findAppNodeParent(partialAppNode, edges, partialAppNodes)
+        return partialAppNode as ChildlessAppNode
+    })
 }
 
 function findAppNodeParent(node: BindinglessAppNode, edges: Edge[], appNodes: BindinglessAppNode[]): AppNode | undefined {
@@ -75,10 +75,10 @@ function findAppNodeParent(node: BindinglessAppNode, edges: Edge[], appNodes: Bi
 
 
 function appendNodesChildren(partialAppNodes: ChildlessAppNode[], edges: Edge[]): AppNode[] {
-    return partialAppNodes.map(partialAppNode => ({
-        ...partialAppNode,
-        children: findAppNodeChildren(partialAppNode, edges, partialAppNodes),
-    }))
+    return partialAppNodes.map(partialAppNode => {
+        (partialAppNode as AppNode).children = findAppNodeChildren(partialAppNode, edges, partialAppNodes)
+        return partialAppNode as AppNode
+    })
 }
 
 function findAppNodeChildren(appNode: BindinglessAppNode, edges: Edge[], appNodes: BindinglessAppNode[]): AppNode[] {
