@@ -1,4 +1,4 @@
 import React from 'react'
-import { globaloverlay, hidden } from './global-overlay.module.css'
+import { globaloverlay} from './global-overlay.module.css'
 
-export const GlobalOverlay: React.FC = () => (<div className={`${globaloverlay} ${hidden}`}/>)
+export const GlobalOverlay: React.FC = () => (<div className={`${globaloverlay}`}/>)

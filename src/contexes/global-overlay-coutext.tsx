@@ -1,4 +1,5 @@
 import React from 'react'
+import { GlobalOverlay } from '../components/singletons/index'
 
 interface Props {
     enabled: boolean
@@ -17,6 +18,7 @@ export const GlobalOverlayContextProvider: React.FC = ({ children }) => {
             disable: () => setValue(false),
             enable: () => setValue(true),
         }}>
+            { enabled || <GlobalOverlay /> }
             {children}
         </GlobalOverlayContext.Provider>
     )
