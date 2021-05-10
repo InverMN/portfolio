@@ -1,11 +1,12 @@
 import React from 'react'
-import { desktop, introductionwrapper, mobile, root } from '../../pages/style.module.css'
+import { introductionwrapper } from '../../pages/style.module.css'
 import { SkillTree } from '../graph'
 import { Introduction } from '../introduction'
 import { Trait, Project } from '../../lib'
-import PageScroller from 'react-page-scroller'
 import { Page } from './page'
 import Media from 'react-media'
+import { Fundation } from './fundation'
+import { GlobalOverlay } from '../singletons'
 
 interface Props {
     traits: Trait[]
@@ -27,7 +28,7 @@ export const Layout: React.FC<Props> = ({ traits, projects }) => {
     )
 
     return (
-        <>
+        <Fundation>
             <Media queries={{ mobile: "(max-width: 799px)", desktop: "(min-width: 800px)" }}>
                 { matches => (
                     <>
@@ -36,6 +37,6 @@ export const Layout: React.FC<Props> = ({ traits, projects }) => {
                     </>
                 )}
             </Media>
-        </>
+        </Fundation>
     )
 }

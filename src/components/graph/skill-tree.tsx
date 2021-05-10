@@ -22,7 +22,6 @@ export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
     const showOverlay = () => {
         setOverlayVisibility(true)
         enableScroll()
-        console.log('Exiting graph!')
     }
     
     return (
