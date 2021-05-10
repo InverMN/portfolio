@@ -8,9 +8,10 @@ import ArticlePreview from '../components/article-preview'
 import { Typography, Box } from '../components/primitive/index'
 import { faAddressCard, faGhost, faTerminal, faMapMarkerAlt, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { PersonalInfo, Avatar, Introduction } from '../components/introduction/index'
-import { root, introductionwrapper } from './style.module.css'
+import { root, introductionwrapper, desktop, mobile } from './style.module.css'
 import { SkillsGraph } from '../components/graph/skills-graph'
 import { Trait, Project } from '../lib'
+import PagedScroll from 'react-page-scroller'
 
 class BlogIndex extends React.Component<PageProps> {
   render() {
@@ -18,15 +19,31 @@ class BlogIndex extends React.Component<PageProps> {
     const projects: Project[] = get(this, 'props.data.allContentfulProject.nodes')
 
     return (
-      <div className={root}>
-        {/* <div className={introductionwrapper}>
-          <Introduction />
-        </div> */}
-        <SkillsGraph
-          traitList={traits}
-          projectList={projects}
-        />
-      </div>
+      <>
+        {/* Desktop */}
+        <div className={`${desktop} ${root}`}>
+          <div className={introductionwrapper}>
+            <Introduction />
+          </div>
+          <SkillsGraph
+            traitList={traits}
+            projectList={projects}
+          />
+        </div>
+
+        {/* Mobile */}
+        <div className={`${mobile} ${root}`}>
+          <PagedScroll >
+            <div className={introductionwrapper}>
+              <Introduction />
+            </div>
+            <SkillsGraph
+              traitList={traits}
+              projectList={projects}
+            />
+          </PagedScroll>
+        </div>
+      </>
     )
   }
 }
