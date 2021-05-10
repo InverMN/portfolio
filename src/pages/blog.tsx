@@ -1,31 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { graphql, PageProps } from 'gatsby'
 import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
-import styles from './blog.module.css'
-import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
-import { Typography, Box } from '../components/primitive/index'
-import { faAddressCard, faGhost, faTerminal, faMapMarkerAlt, faHeart } from '@fortawesome/free-solid-svg-icons'
-import { PersonalInfo, Avatar, Introduction } from '../components/introduction/index'
+import { Introduction } from '../components/introduction/index'
 import { root, introductionwrapper, desktop, mobile } from './style.module.css'
-import { SkillsGraph } from '../components/graph/skills-graph'
+import { SkillTree } from '../components/graph/index'
 import { Trait, Project } from '../lib'
 import PagedScroll from 'react-page-scroller'
+import { ScrollContextProvider, ScrollContext } from '../contexes'
 
 class BlogIndex extends React.Component<PageProps> {
   render() {
     const traits: Trait[] = get(this, 'props.data.allContentfulTrait.nodes')
     const projects: Project[] = get(this, 'props.data.allContentfulProject.nodes')
+    // const { disabled } = useContext(ScrollContext)
 
     return (
-      <>
+      <ScrollContextProvider>
         {/* Desktop */}
         <div className={`${desktop} ${root}`}>
           <div className={introductionwrapper}>
             <Introduction />
           </div>
-          <SkillsGraph
+          <SkillTree
             traitList={traits}
             projectList={projects}
           />
@@ -33,17 +29,29 @@ class BlogIndex extends React.Component<PageProps> {
 
         {/* Mobile */}
         <div className={`${mobile} ${root}`}>
-          <PagedScroll >
-            <div className={introductionwrapper}>
-              <Introduction />
-            </div>
-            <SkillsGraph
-              traitList={traits}
-              projectList={projects}
-            />
-          </PagedScroll>
+          <ScrollContext.Consumer>
+            { ({disabled}) => 
+              (
+                <>
+                  <PagedScroll 
+                    blockScrollUp={disabled}
+                    blockScrollDown={disabled}
+                  >
+                    <div className={introductionwrapper}>
+                      <Introduction />
+                    </div>
+                    <SkillTree
+                      traitList={traits}
+                      projectList={projects}
+                    />
+                  </PagedScroll>
+                </>
+              )
+            }
+          </ScrollContext.Consumer>
+          
         </div>
-      </>
+      </ScrollContextProvider>
     )
   }
 }

@@ -1,0 +1,1 @@
+export const skilltree: string

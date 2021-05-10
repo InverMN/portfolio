@@ -1,3 +1,5 @@
+export { SkillTree } from './skill-tree'
+export { Overlay } from './overlay'
 export { SkillsGraph } from './skills-graph'
 export { options } from './options'
 export { generateAppData } from './node-generation'
