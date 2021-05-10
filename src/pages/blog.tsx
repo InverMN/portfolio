@@ -7,6 +7,7 @@ import { SkillTree } from '../components/graph/index'
 import { Trait, Project } from '../lib'
 import PagedScroll from 'react-page-scroller'
 import { ScrollContextProvider, ScrollContext } from '../contexes'
+import { GlobalOverlay } from '../components/singletons/index'
 
 class BlogIndex extends React.Component<PageProps> {
   render() {
@@ -16,6 +17,7 @@ class BlogIndex extends React.Component<PageProps> {
 
     return (
       <ScrollContextProvider>
+        <GlobalOverlay />
         {/* Desktop */}
         <div className={`${desktop} ${root}`}>
           <div className={introductionwrapper}>

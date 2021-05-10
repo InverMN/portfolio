@@ -10,12 +10,17 @@ interface Props {
 }
 
 export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
-    const { disable: disableScroll } = useContext(ScrollContext)
+    const { disable: disableScroll, enable: enableScroll } = useContext(ScrollContext)
     const [overlayVisibility, setOverlayVisibility] = useState(true)
 
     const hideOverlay = () => {
         setOverlayVisibility(false)
         disableScroll()
+    }
+
+    const showOverlay = () => {
+        setOverlayVisibility(true)
+        enableScroll()
     }
     
     return (
@@ -23,6 +28,7 @@ export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
             <SkillsGraph 
                 traitList={traitList}
                 projectList={projectList}
+                onLeave={showOverlay}
             />
             <Overlay 
                 visibility={overlayVisibility}
