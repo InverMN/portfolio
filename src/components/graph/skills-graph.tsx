@@ -18,9 +18,8 @@ export const SkillsGraph: React.FC<Props> = ({ traitList, projectList, onLeave }
             <Graph
                 graph={generateAppData(traitList, projectList)}
                 options={options}
-                onClick={onLeave}
             />
-            <div className={inner}>
+            <div className={inner} onClick={onLeave}>
                 <FontAwesomeIcon icon={faDoorOpen}/>
             </div>
         </div>
