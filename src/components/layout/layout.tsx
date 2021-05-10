@@ -3,8 +3,9 @@ import { desktop, introductionwrapper, mobile, root } from '../../pages/style.mo
 import { SkillTree } from '../graph'
 import { Introduction } from '../introduction'
 import { Trait, Project } from '../../lib'
-import { PagedScrollContext, PagedScrollProvider } from '../../contexes/paged-scroll-context'
+import PageScroller from 'react-page-scroller'
 import { Page } from './page'
+import Media from 'react-media'
 
 interface Props {
     traits: Trait[]
@@ -27,10 +28,14 @@ export const Layout: React.FC<Props> = ({ traits, projects }) => {
 
     return (
         <>
-            <Page>
-                {introduction}
-                {skilltree}
-            </Page>
+            <Media queries={{ mobile: "(max-width: 799px)", desktop: "(min-width: 800px)" }}>
+                { matches => (
+                    <>
+                        {matches.mobile && (<><Page>{introduction}</Page> <Page>{skilltree}</Page></>)}
+                        {matches.desktop && (<Page>{introduction} {skilltree}</Page>)}
+                    </>
+                )}
+            </Media>
         </>
     )
 }

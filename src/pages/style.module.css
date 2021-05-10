@@ -7,3 +7,10 @@
     min-height: 100vh;
     width: 100%;
 }
+
+@media screen and (min-width: 800px) {
+    .introductionwrapper {
+        padding: 0 50px;
+        width: fit-content;
+    }
+}
