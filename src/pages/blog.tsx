@@ -13,11 +13,10 @@ class BlogIndex extends React.Component<PageProps> {
   render() {
     const traits: Trait[] = get(this, 'props.data.allContentfulTrait.nodes')
     const projects: Project[] = get(this, 'props.data.allContentfulProject.nodes')
-    // const { disabled } = useContext(ScrollContext)
 
     return (
       <ScrollContextProvider>
-        <GlobalOverlay />
+        {/* <GlobalOverlay /> */}
         {/* Desktop */}
         <div className={`${desktop} ${root}`}>
           <div className={introductionwrapper}>
@@ -32,12 +31,12 @@ class BlogIndex extends React.Component<PageProps> {
         {/* Mobile */}
         <div className={`${mobile} ${root}`}>
           <ScrollContext.Consumer>
-            { ({disabled}) => 
+            { ({enabled}) => 
               (
                 <>
                   <PagedScroll 
-                    blockScrollUp={disabled}
-                    blockScrollDown={disabled}
+                    blockScrollUp={!enabled}
+                    blockScrollDown={!enabled}
                   >
                     <div className={introductionwrapper}>
                       <Introduction />

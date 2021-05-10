@@ -1,7 +1,8 @@
+import { truncate } from 'lodash'
 import React, { useState } from 'react'
 
 interface Props {
-    disabled: boolean
+    enabled: boolean
     disable: () => void
     enable: () => void
 }
@@ -9,12 +10,12 @@ interface Props {
 export const ScrollContext = React.createContext<Props>(null!)
 
 export const ScrollContextProvider: React.FC = ({ children }) => {
-    const [disabled, setValue] = useState(false)
+    const [enabled, setValue] = useState(true)
     return (
         <ScrollContext.Provider value={{
-            disabled,
-            disable: () => setValue(true),
-            enable: () => setValue(false),
+            enabled,
+            enable: () => setValue(true),
+            disable: () => setValue(false),
         }}>
             {children}
         </ScrollContext.Provider>
