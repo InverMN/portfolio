@@ -6,7 +6,6 @@ import { Trait, Project } from '../../lib'
 import { Page } from './page'
 import Media from 'react-media'
 import { Fundation } from './fundation'
-import { GlobalOverlay } from '../singletons'
 
 interface Props {
     traits: Trait[]
