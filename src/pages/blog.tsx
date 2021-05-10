@@ -6,7 +6,7 @@ import { root, introductionwrapper, desktop, mobile } from './style.module.css'
 import { SkillTree } from '../components/graph/index'
 import { Trait, Project } from '../lib'
 import PagedScroll from 'react-page-scroller'
-import { ScrollContextProvider, ScrollContext } from '../contexes'
+import { Layout } from '../components/layout/layout'
 
 class BlogIndex extends React.Component<PageProps> {
   render() {
@@ -15,41 +15,10 @@ class BlogIndex extends React.Component<PageProps> {
 
     return (
       <>
-        {/* Desktop */}
-        <div className={`${desktop} ${root}`}>
-          <div className={introductionwrapper}>
-            <Introduction />
-          </div>
-          <SkillTree
-            traitList={traits}
-            projectList={projects}
-          />
-        </div>
-
-        {/* Mobile */}
-        <div className={`${mobile} ${root}`}>
-          <ScrollContext.Consumer>
-            { ({enabled}) => 
-              (
-                <>
-                  <PagedScroll 
-                    blockScrollUp={!enabled}
-                    blockScrollDown={!enabled}
-                  >
-                    <div className={introductionwrapper}>
-                      <Introduction />
-                    </div>
-                    <SkillTree
-                      traitList={traits}
-                      projectList={projects}
-                    />
-                  </PagedScroll>
-                </>
-              )
-            }
-          </ScrollContext.Consumer>
-          
-        </div>
+        <Layout 
+          traits={traits}
+          projects={projects}
+        />
       </>
     )
   }

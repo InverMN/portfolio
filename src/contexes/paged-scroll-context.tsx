@@ -7,7 +7,13 @@ interface Props {
     disable: () => void
 }
 
-export const PagedScrollContext = React.createContext<Props>(null!)
+const defaultPayload = {
+    enabled: true,
+    enable: () => {},
+    disable: () => {},
+}
+
+export const PagedScrollContext = React.createContext<Props>(defaultPayload)
 
 export const PagedScrollProvider: React.FC = ({ children }) => {
     const [enabled, setValue] = React.useState(true);

@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react'
 import { skilltree } from './skill-tree.module.css'
 import { Overlay, SkillsGraph } from './index'
 import { Trait, Project } from '../../lib'
-import { ScrollContext } from '../../contexes/index'
+import { PagedScrollContext } from '../../contexes/paged-scroll-context'
+
 
 interface Props {
     traitList: Trait[]
@@ -10,7 +11,7 @@ interface Props {
 }
 
 export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
-    const { disable: disableScroll, enable: enableScroll } = useContext(ScrollContext)
+    const { disable: disableScroll, enable: enableScroll } = useContext(PagedScrollContext)
     const [overlayVisibility, setOverlayVisibility] = useState(true)
 
     const hideOverlay = () => {
