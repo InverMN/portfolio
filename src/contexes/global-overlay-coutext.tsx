@@ -9,7 +9,7 @@ interface Props {
 
 export const GlobalOverlayContext = React.createContext<Props>(null!)
 
-export const GlobalOverlayContextProvider: React.FC = ({ children }) => {
+export const GlobalOverlayProvider: React.FC = ({ children }) => {
     const [enabled, setValue] = React.useState(false)
 
     return (
