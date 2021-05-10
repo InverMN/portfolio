@@ -18,7 +18,7 @@ export const GlobalOverlayProvider: React.FC = ({ children }) => {
             disable: () => setValue(false),
             enable: () => setValue(true),
         }}>
-            { enabled || <GlobalOverlay /> }
+            { enabled && <GlobalOverlay /> }
             {children}
         </GlobalOverlayContext.Provider>
     )
