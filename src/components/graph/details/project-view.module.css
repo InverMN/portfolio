@@ -2,4 +2,37 @@
     display: flex;
     padding: 5px;
     background-color: black;
+    flex-flow: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.header {
+    flex: 0 0 content;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    flex: 1 1 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.date {
+    flex: 1 1 auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.description {
+
+}
+
+.repo {
+
 }
