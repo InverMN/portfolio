@@ -24,11 +24,21 @@ function generateGraphData(traits: Trait[]): GraphData {
 }
 
 function generateGraphNodes(traits: Trait[]): Node[] {
-    return traits.map(it => ({ id: it.name, label: it.name, title: "Click for more info", image: it.logo.file.url, shape: "image" }))
+    return traits.map(it => ({ id: it.name, label: it.name, image: it.logo.file.url, shape: "image" }))
 }
 
 function generateGraphEdges(traits: Trait[]): Edge[] {
     return traits.map(it => ({ from: it.contentfulparent?.name, to: it.name, arrows: "none", physics: true, smooth: true, length: 200, width: 3, selectionWidth: 0 }))
+}
+
+function handleNotChromium(nodes: Node[]) {
+    // @ts-ignore
+    if(!globalThis.chrome)
+        changeNodesImageFormatToPng(nodes)
+}
+
+function changeNodesImageFormatToPng(nodes: Node[]) {
+    return nodes.forEach(it => it.image += "?fm=png&w=512&h=512")
 }
 
 
