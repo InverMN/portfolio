@@ -2,11 +2,11 @@ import { Trait, Project, AppNode } from '../../lib'
 import { Node, Edge } from 'vis-network/standalone'
 import { processAppNodes } from './index'
 
-export function generateAppData(traits: Trait[], projects: Project[]): GraphData {
+export function generateAppData(traits: Trait[], projects: Project[]): [AppNode[], GraphData] {
     const { nodes, edges } = generateGraphData(traits)
     const appNodes = generateAppNodes(nodes, projects, edges)
     const processedNodes = processAppNodes(appNodes)
-    return { nodes: processedNodes, edges }
+    return [appNodes, { nodes: processedNodes, edges }]
 }
 
 
@@ -19,6 +19,8 @@ interface GraphData {
 function generateGraphData(traits: Trait[]): GraphData {
     const nodes = generateGraphNodes(traits)
     const edges = generateGraphEdges(traits)
+
+    handleNotChromium(nodes)
 
     return { nodes, edges }
 }

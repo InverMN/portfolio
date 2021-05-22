@@ -6,4 +6,7 @@ export interface Trait {
             url: string
         }
     }
+    desc: {
+        desc: string
+    }
 }

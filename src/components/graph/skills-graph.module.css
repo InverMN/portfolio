@@ -1,4 +1,4 @@
-.skillsgraph {
+.skillsGraph {
     position: absolute;
     top: 0;
     left: 0;
@@ -7,7 +7,7 @@
     background-color: rgb(209, 209, 209);
 }
 
-.inner {
+.controls {
     position: absolute;
     top: 20px;
     left: 20px;

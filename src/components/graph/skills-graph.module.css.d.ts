@@ -1,2 +1,2 @@
-export const skillsgraph: string
-export const inner: string
+export const skillsGraph: string
+export const controls: string
