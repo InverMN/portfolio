@@ -10,19 +10,19 @@ interface Props {
     appNode: AppNode
 }
 
-export const TraitDetails: React.FC<Props> = ({ onLeave, appNode }) => {
+export const TraitDetails: React.FC<Props> = ({ onLeave, appNode: { metadata, projects } }) => {
     return (
         <div className={base}>
             <div className={traitDetails}>
                 <div className={header}>
                     <div>
-                        <div className={logoWrapper}> <img src={appNode.graphNode.image as string}/> </div>
-                        <div className={label}> {appNode.graphNode.label} </div>
+                        <div className={logoWrapper}> <img src={metadata.logoUrl}/> </div>
+                        <div className={label}> {metadata.name} </div>
                         <div className={leaveButton} onClick={onLeave}><FontAwesomeIcon icon={faTimes}/></div>
                     </div>
-                    <div className={description}>Lorem ispum dolor...</div> 
+                    <div className={description}>{metadata.description}</div> 
                 </div>
-                { appNode.projects.length != 0 && <ProjectsLists projects={appNode.projects}/> }
+                { projects.length != 0 && <ProjectsLists projects={projects}/> }
             </div>
         </div>
     )
