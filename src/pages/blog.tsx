@@ -51,8 +51,8 @@ export const pageQuery = graphql`
           description
         }
         creationDate
-        public
-        repository
+        openSource
+        repositoryUrl
         previewUrl
         technologies {
           name
