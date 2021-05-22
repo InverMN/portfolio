@@ -30,7 +30,7 @@ export const pageQuery = graphql`
   query TraitQuery {
     allContentfulTrait {
       nodes {
-         name
+        name
         contentfulparent {
           name
         }
@@ -38,6 +38,9 @@ export const pageQuery = graphql`
           file {
             url
           }
+        }
+        desc {
+          desc
         }
       }
     }

@@ -26,7 +26,20 @@ function generateGraphData(traits: Trait[]): GraphData {
 }
 
 function generateGraphNodes(traits: Trait[]): Node[] {
-    return traits.map(it => ({ id: it.name, label: it.name, image: it.logo.file.url, shape: "image" }))
+    return traits.map(it => {
+        let node: Node = { id: it.name, label: it.name, image: it.logo.file.url, shape: "image" }
+        injectMetadataToNode(node, it)
+        return node
+    })
+}
+
+function injectMetadataToNode(node: Node, trait: Trait) {
+    // @ts-ignore
+    node.metadata = {
+        name: trait.name,
+        logoUrl: trait.logo.file.url,
+        description: trait?.desc?.desc ?? "No description",
+    }
 }
 
 function generateGraphEdges(traits: Trait[]): Edge[] {
@@ -49,6 +62,8 @@ function generateAppNodes(nodes: Node[], projects: Project[], edges: Edge[]): Ap
     const partialAppNodes = generatePartialAppNodes(nodes, projects)
     const partialAppNodesWithParents = appendNodesParents(partialAppNodes, edges)
     const appNodes = appendNodesChildren(partialAppNodesWithParents, edges)
+
+    injectMetadataToAppNodes(appNodes)
 
     return appNodes
 }
@@ -91,6 +106,11 @@ function appendNodesChildren(partialAppNodes: ChildlessAppNode[], edges: Edge[])
         (partialAppNode as AppNode).children = findAppNodeChildren(partialAppNode, edges, partialAppNodes)
         return partialAppNode as AppNode
     })
+}
+
+function injectMetadataToAppNodes(appNodes: AppNode[]) {
+    // @ts-ignore
+    appNodes.forEach(it => it.metadata = it.graphNode.metadata)
 }
 
 function findAppNodeChildren(appNode: BindinglessAppNode, edges: Edge[], appNodes: BindinglessAppNode[]): AppNode[] {
