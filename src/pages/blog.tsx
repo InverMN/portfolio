@@ -12,13 +12,15 @@ class BlogIndex extends React.Component<PageProps> {
   render() {
     const traits: Trait[] = get(this, 'props.data.allContentfulTrait.nodes')
     const projects: Project[] = get(this, 'props.data.allContentfulProject.nodes')
+    const preProcessedBiographyChapters: {content: { content: string }}[] = get(this, 'props.data.allContentfulBiographyChapter.nodes')
+    const biographyChapters = preProcessedBiographyChapters.flatMap(it => it.content.content)
 
     return (
       <>
         <Layout 
           traits={traits}
           projects={projects}
-          biographyChapters={["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices mauris magna, eget luctus dolor porta et. Suspendisse quis tincidunt tortor, vitae laoreet nunc. Donec vel nibh eu neque luctus viverra. Vivamus a mauris mollis, varius eros non, vestibulum ligula. Sed elementum condimentum erat, at suscipit nunc scelerisque sit amet. Curabitur vehicula eleifend massa vel congue. Praesent ultricies augue quis tellus congue, sit amet pulvinar neque elementum. In malesuada, dolor quis ultricies placerat, nibh est volutpat est, a dignissim quam nulla non turpis.", "Second", "Third", "4th"]}
+          biographyChapters={biographyChapters.reverse()}
         />
       </>
     )
@@ -57,6 +59,13 @@ export const pageQuery = graphql`
         previewUrl
         technologies {
           name
+        }
+      }
+    }
+    allContentfulBiographyChapter {
+			nodes {
+				content {
+					content
         }
       }
     }
