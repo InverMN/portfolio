@@ -5,7 +5,6 @@ import { Introduction } from '../components/introduction/index'
 import { root, introductionwrapper, desktop, mobile } from './style.module.css'
 import { SkillTree } from '../components/graph/index'
 import { Trait, Project } from '../lib'
-import PagedScroll from 'react-page-scroller'
 import { Layout } from '../components/layout/layout'
 
 class BlogIndex extends React.Component<PageProps> {
