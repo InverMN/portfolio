@@ -1,12 +1,15 @@
 import React from 'react'
-import { introductionwrapper } from '../../pages/style.module.css'
+
+import Media from 'react-media'
+
+import { Biography } from '../biography'
 import { SkillTree } from '../graph'
 import { Introduction } from '../introduction'
 import { Trait, Project } from '../../lib'
-import { Page } from './page'
-import Media from 'react-media'
-import { Fundation } from './fundation'
-import { Biography } from '../biography'
+
+import { Fundation, Page } from '.'
+import { introductionWrapper } from './styles/layout.module.css'
+
 
 interface Props {
     traits: Trait[]
@@ -16,7 +19,7 @@ interface Props {
 
 export const Layout: React.FC<Props> = ({ traits, projects, biographyChapters }) => {
     const introduction = (
-        <div className={introductionwrapper}>
+        <div className={introductionWrapper}>
             <Introduction />
         </div>
     )

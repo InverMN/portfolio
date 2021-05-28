@@ -1,7 +1,10 @@
 import React from 'react'
+
 import { Project } from '../../../lib'
-import { projectsList } from './projects-list.module.css'
-import { ProjectView } from './'
+
+import { ProjectView } from '.'
+import { projectsList } from './styles/projects-list.module.css'
+
 
 interface Props {
     projects: Project[]

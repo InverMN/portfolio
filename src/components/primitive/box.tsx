@@ -1,5 +1,7 @@
 import React from 'react'
-import * as Style from './box.module.css'
+
+import * as Style from './styles/box.module.css'
+
 
 interface Props {
     shape: "sharp" | "rounded" | "circle"

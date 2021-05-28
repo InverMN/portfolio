@@ -1,1 +1,1 @@
-export const globaloverlay: string
+export const globalOverlay: string

@@ -1,10 +1,13 @@
 import React from 'react'
-import { Field } from './index'
-import { faAddressCard, faMask, faTerminal, faMapMarkerAlt, faHeart } from '@fortawesome/free-solid-svg-icons'
-import { personalinfo } from './personal-info.module.css'
 
-export const PersonalInfo: React.FC = ({ children }) => (
-    <div className={personalinfo}>
+import { faAddressCard, faMask, faTerminal, faMapMarkerAlt, faHeart } from '@fortawesome/free-solid-svg-icons'
+
+import { Field } from '.'
+import { personalInfo } from './styles/personal-info.module.css'
+
+
+export const PersonalInfo: React.FC = () => (
+    <div className={personalInfo}>
         <Field icon={faAddressCard} iconColor="cyan">Paweł Jankowski</Field>
         <Field icon={faMask} iconColor="royalblue">Inver</Field>
         <Field icon={faTerminal} iconColor="#03AC00">Software Developer</Field>

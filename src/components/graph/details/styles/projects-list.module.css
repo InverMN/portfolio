@@ -1,4 +1,4 @@
-.projectsList {
+.projects-list {
     flex: 1 1 fit-content;
     display: flex;
     flex-flow: column;
@@ -10,14 +10,14 @@
     overflow-y: auto;
 }
 
-.projectsList::-webkit-scrollbar {
+.projects-list::-webkit-scrollbar {
     background-color: rgb(51, 51, 51);
     width: 12px;
     border-radius: 100px;
     padding: 1px;
 }
 
-.projectsList::-webkit-scrollbar-thumb {
+.projects-list::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: inset 0px 0px 2px gray;
     border-radius: 100px;

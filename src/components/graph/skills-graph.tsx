@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
-import { options, generateAppData, events } from './'
-import { skillsGraph, controls } from './skills-graph.module.css'
+import React from 'react'
+
+import { useState } from 'react'
 import Graph from 'react-vis-network-graph'
-import { Trait, Project, AppNode } from '../../lib'
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { Trait, Project, AppNode } from '../../lib'
+
+import { options, generateAppData, events } from '.'
 import { TraitDetails } from './details'
+import { skillsGraph, controls } from './styles/skills-graph.module.css'
+
 
 interface Props {
     traitList: Trait[]

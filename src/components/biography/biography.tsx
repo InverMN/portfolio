@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+
+import { useState, useEffect } from 'react'
+
 import { Chapter, Controls } from '.'
-import { biographyWrapper, paper } from './biography.module.css'
+import { biographyWrapper, paper } from './styles/biography.module.css'
+
 
 interface Props {
     chapters: string[]

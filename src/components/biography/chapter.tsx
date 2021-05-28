@@ -1,5 +1,7 @@
 import React from 'react'
-import { chapter } from './chapter.module.css'
+
+import { chapter } from './styles/chapter.module.css'
+
 
 interface Props {
     pageNumber: number

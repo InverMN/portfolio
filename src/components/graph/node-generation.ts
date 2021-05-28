@@ -1,6 +1,9 @@
-import { Trait, Project, AppNode } from '../../lib'
 import { Node, Edge } from 'vis-network/standalone'
-import { processAppNodes } from './index'
+
+import { Trait, Project, AppNode } from '../../lib'
+
+import { processAppNodes } from '.'
+
 
 export function generateAppData(traits: Trait[], projects: Project[]): [AppNode[], GraphData] {
     const { nodes, edges } = generateGraphData(traits)

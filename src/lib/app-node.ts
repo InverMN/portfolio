@@ -1,5 +1,7 @@
 import { Node } from 'vis-network/standalone'
-import { Project } from './index'
+
+import { Project } from '.'
+
 
 interface Metadata {
     name: string

@@ -1,9 +1,13 @@
 import React from 'react'
-import { AppNode } from '../../../lib'
-import { base, traitDetails, header, logoWrapper, label, leaveButton, description } from './trait-details.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { AppNode } from '../../../lib'
+
 import { ProjectsLists } from './projects-list'
+import { base, traitDetails, header, logoWrapper, label, leaveButton } from './styles/trait-details.module.css'
+
 
 interface Props {
     onLeave: () => void
@@ -20,7 +24,7 @@ export const TraitDetails: React.FC<Props> = ({ onLeave, appNode: { metadata, pr
                         <div className={label}> {metadata.name} </div>
                         <div className={leaveButton} onClick={onLeave}><FontAwesomeIcon icon={faTimes}/></div>
                     </div>
-                    <div className={description}>{metadata.description}</div> 
+                    <div>{metadata.description}</div> 
                 </div>
                 { projects.length != 0 && <ProjectsLists projects={projects}/> }
             </div>

@@ -1,6 +1,6 @@
-.globaloverlay {
+.global-overlay {
     position: absolute;
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
     z-index: 1024;
     background-color: rgba(0, 0, 0, 0.8);

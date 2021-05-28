@@ -1,5 +1,7 @@
 import React from 'react'
+
 import { AppNode } from "../../lib"
+
 
 export const events = (appNodes: AppNode[], selectAppNode: React.Dispatch<React.SetStateAction<AppNode | undefined>>) => ({
     click: event => {
@@ -8,10 +10,4 @@ export const events = (appNodes: AppNode[], selectAppNode: React.Dispatch<React.
             selectAppNode(selectedNode)
         }
     },
-    // hoverNode: () => {
-    //     document.body.style.cursor = 'pointer'
-    // },
-    // blurNode: () => {
-    //     document.body.style.cursor = 'default'
-    // },
 })

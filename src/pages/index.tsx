@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React from 'react'
+
 import { graphql, PageProps } from 'gatsby'
 import get from 'lodash/get'
-import { Introduction } from '../components/introduction/index'
-import { root, introductionwrapper, desktop, mobile } from './style.module.css'
-import { SkillTree } from '../components/graph/index'
+
 import { Trait, Project } from '../lib'
 import { Layout } from '../components/layout/layout'
+
+import "./global.css"
+
 
 class BlogIndex extends React.Component<PageProps> {
   render() {

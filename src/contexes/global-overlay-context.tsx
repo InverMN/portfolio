@@ -1,5 +1,7 @@
 import React from 'react'
-import { GlobalOverlay } from '../components/singletons/index'
+
+import { GlobalOverlay } from '../components/singletons'
+
 
 interface Props {
     enabled: boolean

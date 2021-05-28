@@ -1,4 +1,4 @@
-.introductionwrapper {
+.introduction-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 800px) {
-    .introductionwrapper {
+    .introduction-wrapper {
         padding: 0 50px;
         width: fit-content;
     }

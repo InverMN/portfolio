@@ -1,12 +1,13 @@
 import React from 'react'
-import { controls, button, disabled } from './controls.module.css'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons"
+
+import { controls, button, disabled } from './styles/controls.module.css'
 
 interface Props {
     previousChapter: () => void
     nextChapter: () => void
-
     allowPrevious: boolean
     allowNext: boolean
 }

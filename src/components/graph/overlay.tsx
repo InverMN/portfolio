@@ -1,5 +1,7 @@
 import React from 'react'
-import { overlay, internal, browse, hidden } from './overlay.module.css'
+
+import { overlay, internal, browse, hidden } from './styles/overlay.module.css'
+
 
 interface Props {
     visibility: boolean

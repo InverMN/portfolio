@@ -1,5 +1,7 @@
 import { Node } from "vis-network/standalone";
+
 import { AppNode } from "../../lib";
+
 
 export function processAppNodes(nodes: AppNode[]): Node[] {
     return nodes.map(it => {

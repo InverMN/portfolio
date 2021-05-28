@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react'
-import { skilltree } from './skill-tree.module.css'
-import { Overlay, SkillsGraph } from './index'
+
+import { PagedScrollContext, GlobalOverlayContext } from '../../contexes'
 import { Trait, Project } from '../../lib'
-import { PagedScrollContext } from '../../contexes/paged-scroll-context'
-import { GlobalOverlayContext } from '../../contexes/global-overlay-context'
+
+import { Overlay, SkillsGraph } from '.'
+import { skilltree } from './styles/skill-tree.module.css'
 
 
 interface Props {

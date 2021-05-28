@@ -1,5 +1,7 @@
 import React from 'react'
-import { avatar, content } from './avatar.module.css'
+
+import { avatar, content } from './styles/avatar.module.css'
+
 
 export const Avatar: React.FC = () => (
     <div className={avatar}>

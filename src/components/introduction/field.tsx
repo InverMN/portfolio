@@ -1,7 +1,11 @@
 import React from 'react'
-import { Typography, Box } from '../primitive/index'
-import { field } from './field.module.css'
+
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+
+import { Typography, Box } from '../primitive'
+
+import { field } from './styles/field.module.css'
+
 
 interface Props {
     icon: IconDefinition
