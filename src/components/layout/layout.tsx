@@ -6,13 +6,15 @@ import { Trait, Project } from '../../lib'
 import { Page } from './page'
 import Media from 'react-media'
 import { Fundation } from './fundation'
+import { Biography } from '../biography'
 
 interface Props {
     traits: Trait[]
     projects: Project[]
+    biographyChapters: string[]
 }
 
-export const Layout: React.FC<Props> = ({ traits, projects }) => {
+export const Layout: React.FC<Props> = ({ traits, projects, biographyChapters }) => {
     const introduction = (
         <div className={introductionwrapper}>
             <Introduction />
@@ -31,8 +33,8 @@ export const Layout: React.FC<Props> = ({ traits, projects }) => {
             <Media queries={{ mobile: "(max-width: 799px)", desktop: "(min-width: 800px)" }}>
                 { matches => (
                     <>
-                        {matches.mobile && (<><Page>{introduction}</Page> <Page>{skilltree}</Page></>)}
-                        {matches.desktop && (<Page>{introduction} {skilltree}</Page>)}
+                        {matches.mobile && (<><Page>{introduction}</Page> <Page>{skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page></>)}
+                        {matches.desktop && (<><Page>{introduction} {skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page></>)}
                     </>
                 )}
             </Media>

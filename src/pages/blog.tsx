@@ -18,6 +18,7 @@ class BlogIndex extends React.Component<PageProps> {
         <Layout 
           traits={traits}
           projects={projects}
+          biographyChapters={["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices mauris magna, eget luctus dolor porta et. Suspendisse quis tincidunt tortor, vitae laoreet nunc. Donec vel nibh eu neque luctus viverra. Vivamus a mauris mollis, varius eros non, vestibulum ligula. Sed elementum condimentum erat, at suscipit nunc scelerisque sit amet. Curabitur vehicula eleifend massa vel congue. Praesent ultricies augue quis tellus congue, sit amet pulvinar neque elementum. In malesuada, dolor quis ultricies placerat, nibh est volutpat est, a dignissim quam nulla non turpis.", "Second", "Third", "4th"]}
         />
       </>
     )

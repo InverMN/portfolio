@@ -1,0 +1,13 @@
+.chapter {
+    font-family: 'Indie Flower', cursive;
+}
+
+.chapter h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.chapter p {
+    font-size: 20px;
+    margin: 0;
+}
