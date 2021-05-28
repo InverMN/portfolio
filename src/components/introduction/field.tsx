@@ -2,7 +2,7 @@ import React from 'react'
 
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
-import { Typography, Box } from '../primitive'
+import { Typography, Box } from '../primitives'
 
 import { field } from './styles/field.module.css'
 
