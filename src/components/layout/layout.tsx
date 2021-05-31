@@ -8,7 +8,7 @@ import { Introduction } from '../introduction'
 import { Trait, Project } from '../../lib'
 
 import { Fundation, Page } from '.'
-import { introductionWrapper } from './styles/layout.module.css'
+import { introductionWrapper, layout } from './styles/layout.module.css'
 
 
 interface Props {
@@ -33,14 +33,16 @@ export const Layout: React.FC<Props> = ({ traits, projects, biographyChapters })
 
     return (
         <Fundation>
-            <Media queries={{ mobile: "(max-width: 799px)", desktop: "(min-width: 800px)" }}>
-                { matches => (
-                    <>
-                        {matches.mobile && (<><Page>{introduction}</Page> <Page>{skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page></>)}
-                        {matches.desktop && (<><Page>{introduction} {skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page></>)}
-                    </>
-                )}
-            </Media>
+            <div className={layout}>
+                <Media queries={{ mobile: "(max-width: 799px)", desktop: "(min-width: 800px)" }}>
+                    { matches => (
+                        <>
+                            {matches.mobile && (<><Page>{introduction}</Page> <Page>{skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page></>)}
+                            {matches.desktop && (<><Page>{introduction} {skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page></>)}
+                        </>
+                    )}
+                </Media>
+            </div>
         </Fundation>
     )
 }
