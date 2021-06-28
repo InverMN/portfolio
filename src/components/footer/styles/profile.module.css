@@ -1,0 +1,9 @@
+.profile {
+    display: flex;
+    grid-area: profile;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    color: wheat;
+}
