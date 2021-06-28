@@ -13,7 +13,7 @@
 }
 
 .trait-details {
-    flex: 0 0 fit-content;
+    flex: 1 1 content;
     padding: 20px;
 
     background-color: black;
@@ -67,5 +67,11 @@
 @media only screen and (min-width: 800px) {
     .trait-details {
         width: 400px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .trait-details {
+        width: 90%;
     }
 } 
