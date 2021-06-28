@@ -1,0 +1,24 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.link {
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    transition: left .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    left: 0;
+}
+
+.link:hover {
+    left: -5px;
+}

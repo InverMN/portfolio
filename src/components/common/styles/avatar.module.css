@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
 
     position: static;
 
@@ -11,8 +13,6 @@
     border: 5px solid #949494;
     box-sizing: border-box;
     border-radius: 1000px;
-
-    flex: 1 1 100%;
 }
 
 .content {

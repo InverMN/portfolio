@@ -1,0 +1,8 @@
+.profile {
+    display: flex;
+    grid-area: profile;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

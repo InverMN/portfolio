@@ -1,0 +1,9 @@
+.copyright {
+    grid-area: copyright;
+    font-size: 16px;
+    font-weight: normal;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 60px;
+    background-color: black;
+}

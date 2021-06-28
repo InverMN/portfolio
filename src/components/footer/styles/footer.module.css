@@ -1,3 +1,12 @@
 .footer {
-    height: 100%;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    display: grid;
+    grid-template-columns: repeat(auto);
+    grid-template-rows: 1fr 60px;
+    grid-template-areas:
+        "profile navigation contact"
+        "copyright copyright copyright";
+    font-size: 18px;
+    color: whitesmoke;
 }
