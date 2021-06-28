@@ -39,7 +39,7 @@ export const Layout: React.FC<Props> = ({ traits, projects, biographyChapters })
                     { matches => (
                         <>
                             {matches.mobile && (<><Page>{introduction}</Page> <Page>{skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page> <Page><Footer /></Page></>)}
-                            {matches.desktop && (<><Page>{introduction} {skilltree}</Page> <Page><Biography chapters={biographyChapters}/></Page> <Page><Footer /></Page></>)}
+                            {matches.desktop && (<><Page>{introduction} {skilltree}</Page> <br/> <Page><Biography chapters={biographyChapters}/></Page> <Page><Footer /></Page></>)}
                         </>
                     )}
                 </Media>
