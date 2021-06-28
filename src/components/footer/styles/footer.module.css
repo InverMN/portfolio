@@ -2,11 +2,24 @@
     width: 100%;
     background-color: rgb(18, 18, 18);
     display: grid;
-    grid-template-columns: repeat(auto);
-    grid-template-rows: 1fr 60px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 60px;
     grid-template-areas:
-        "profile navigation contact"
-        "copyright copyright copyright";
+        "profile"
+        "navigation"
+        "contact"
+        "copyright";
     font-size: 18px;
     color: whitesmoke;
+    max-height: 100vh;
+}
+
+@media only screen and (min-width: 800px) {
+    .footer {
+        grid-template-columns: repeat(auto);
+        grid-template-rows: 1fr 60px;
+        grid-template-areas:
+            "profile navigation contact"
+            "copyright copyright copyright";
+    }
 }
