@@ -10,7 +10,7 @@
 }
 
 .layout::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, rgba(221,160,221,1) 0%, rgba(221,160,221,1) 33.333333%, rgba(102,45,145,1) 33.3333333%, rgba(102,45,145,1) 66.666666%, rgba(238,130,238,1) 66.6666666%, rgba(238,130,238,1) 100%);
+    background: linear-gradient(180deg, rgba(221,160,221) 0%, rgba(221,160,221) 25%, rgba(102,45,145) 25%, rgba(102,45,145) 50%, rgba(238,130,238) 50%, rgba(238,130,238) 75%, rgb(108, 52, 150) 75%, rgb(108, 52, 150) 100%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -42,6 +42,6 @@
     }
 
     .layout::-webkit-scrollbar-track {
-        background: linear-gradient(180deg, rgba(221,160,221,1) 0%, rgba(221,160,221,1) 50%, rgba(102,45,145,1) 50%, rgba(102,45,145,1) 100%);
+        background: linear-gradient(180deg, rgba(221,160,221) 0%, rgba(221,160,221) 33.333333%, rgba(102,45,145,1) 33.3333333%, rgba(102,45,145) 66.666666%, rgba(238,130,238) 66.6666666%, rgba(238,130,238) 100%);
     }
 }
