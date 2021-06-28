@@ -2,7 +2,8 @@ import React from 'react'
 
 import { FunctionComponent } from 'react'
 
-import { navigation, title, links, link } from './styles/navigation.module.css'
+import { title } from './styles/common.module.css'
+import { navigation, links, link } from './styles/navigation.module.css'
 
 
 export const Navigation: FunctionComponent = () => {

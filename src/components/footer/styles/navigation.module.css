@@ -5,11 +5,6 @@
     flex-direction: column;
 }
 
-.title {
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
 .links {
     display: flex;
     flex-direction: column;
