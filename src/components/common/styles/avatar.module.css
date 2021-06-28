@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
 
     position: static;
 
