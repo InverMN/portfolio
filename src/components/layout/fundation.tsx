@@ -9,7 +9,7 @@ export const Fundation: React.FC = ({ children }) => (
     <>
         <Helmet >
             <meta charSet="utf-8" />
-            <title>Inver's Page</title>
+            <title>Inver Introduction</title>
             <html lang="en" />
         </Helmet>
         <GlobalOverlayProvider>
