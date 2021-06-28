@@ -25,7 +25,7 @@ export const Biography: React.FC<Props> = ({ chapters }) => {
     }, [currentPage])
 
     return (
-        <div className={biographyWrapper}>
+        <div className={biographyWrapper} id="biography">
             <div className={paper}>
                 <Chapter 
                     pageNumber={currentPage + 1}

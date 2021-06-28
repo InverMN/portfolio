@@ -9,7 +9,7 @@ import { profile } from './styles/profile.module.css'
 
 export const Profile: FunctionComponent = () => (
     <div className={profile}>
-        <div style={{margin: "0 auto"}}><Avatar /></div>
+        <Avatar />
         <div>Paweł Jankowski</div>
     </div>
 )

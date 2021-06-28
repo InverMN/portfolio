@@ -7,7 +7,7 @@ import { introduction } from './styles/introduction.module.css'
 
 
 export const Introduction: React.FC  = () => (
-    <div className={introduction}>
+    <div className={introduction} id="introduction">
         <Avatar/>
         <PersonalInfo/>
     </div>

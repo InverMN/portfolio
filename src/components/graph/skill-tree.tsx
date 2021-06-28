@@ -33,7 +33,7 @@ export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
     }
     
     return (
-        <div className={skilltree} style={{ zIndex: focused ? 2048 : 0 }}>
+        <div className={skilltree} style={{ zIndex: focused ? 2048 : 0 }} id="skills">
             <SkillsGraph 
                 traitList={traitList}
                 projectList={projectList}
