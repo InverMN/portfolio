@@ -6,7 +6,7 @@
 Right now you search repo which contains source code of mine self-created portfolio webpage. Want to see it in action? Just click [the link](https://inver-portfolio.netlify.app)
 
 ### Purpose
-The page contains basic information about user, skills that are stored for easier read in graph viewer and short biography. The webpage intoduces me, and even the source code of it is a good example of some my front-end developer skills.
+The page contains basic information about user, skills that are stored for easier read in graph viewer and short biography. The webpage intoduces me, and even the source code of it is a good example of some my front-end developer skills
 
 
 ### Technologies
