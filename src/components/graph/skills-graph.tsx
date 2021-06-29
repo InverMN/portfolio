@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Graph from 'react-vis-network-graph'
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { PagedScrollContext } from '../../contexes'
 import { Trait, Project, AppNode } from '../../lib'
 
 import { options, generateAppData, events } from '.'

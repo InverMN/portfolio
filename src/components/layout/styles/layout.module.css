@@ -1,8 +1,15 @@
 .layout {
     height: 100vh;
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+}
+
+.enable-scroll {
+    overflow-y: scroll;
+}
+
+.disable-scroll {
+    overflow-y: hidden;
 }
 
 .layout::-webkit-scrollbar {

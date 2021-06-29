@@ -1,15 +1,17 @@
 import React from 'react'
 
+import { useContext } from 'react'
 import Media from 'react-media'
 
 import { Biography } from '../biography'
 import { Footer } from '../footer'
 import { SkillTree } from '../graph'
 import { Introduction } from '../introduction'
+import { PagedScrollContext } from '../../contexes'
 import { Trait, Project } from '../../lib'
 
 import { Fundation, Page } from '.'
-import { introductionWrapper, layout } from './styles/layout.module.css'
+import { introductionWrapper, layout, disableScroll, enableScroll } from './styles/layout.module.css'
 
 
 interface Props {
@@ -32,9 +34,11 @@ export const Layout: React.FC<Props> = ({ traits, projects, biographyChapters })
         />
     )
 
+    const { enabled } = useContext(PagedScrollContext)
+
     return (
         <Fundation>
-            <div className={layout}>
+            <div className={`${layout} ${enabled ? enableScroll : disableScroll}`}>
                 <Media queries={{ mobile: "(max-width: 799px)", desktop: "(min-width: 800px)" }}>
                     { matches => (
                         <>

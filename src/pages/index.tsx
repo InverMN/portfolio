@@ -4,7 +4,7 @@ import { graphql, PageProps } from 'gatsby'
 import get from 'lodash/get'
 
 import { Trait, Project } from '../lib'
-import { Layout } from '../components/layout/layout'
+import { Layout, ContextCenter } from '../components/layout'
 
 import "./global.css"
 
@@ -17,13 +17,13 @@ class BlogIndex extends React.Component<PageProps> {
     const biographyChapters = preProcessedBiographyChapters.flatMap(it => it.content.content)
 
     return (
-      <>
+      <ContextCenter>
         <Layout 
           traits={traits}
           projects={projects}
           biographyChapters={biographyChapters.reverse()}
         />
-      </>
+      </ContextCenter>
     )
   }
 }

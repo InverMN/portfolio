@@ -1,4 +1,6 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
+
+import { useState, useContext } from 'react'
 
 import { PagedScrollContext, GlobalOverlayContext } from '../../contexes'
 import { Trait, Project } from '../../lib'
@@ -13,22 +15,24 @@ interface Props {
 }
 
 export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
-    const { disable: disableScroll, enable: enableScroll } = useContext(PagedScrollContext)
+    const { enable: enableScroll, disable: disableScroll, enabled } = useContext(PagedScrollContext)
     const { disable: disableOverlay, enable: enableOverlay } = useContext(GlobalOverlayContext)
     const [overlayVisibility, setOverlayVisibility] = useState(true)
     const [focused, setFocused] = useState(false)
 
     const hideOverlay = () => {
+        console.log("Overlay hidden")
         setOverlayVisibility(false)
-        enableOverlay()
         disableScroll()
+        enableOverlay()
         setFocused(true)
     }
-
+    
     const showOverlay = () => {
+        console.log("Overlay shwon")
         setOverlayVisibility(true)
-        disableOverlay()
         enableScroll()
+        disableOverlay()
         setFocused(false)
     }
     
