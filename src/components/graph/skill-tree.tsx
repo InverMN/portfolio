@@ -21,7 +21,6 @@ export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
     const [focused, setFocused] = useState(false)
 
     const hideOverlay = () => {
-        console.log("Overlay hidden")
         setOverlayVisibility(false)
         disableScroll()
         enableOverlay()
@@ -29,7 +28,6 @@ export const SkillTree: React.FC<Props> = ({ traitList, projectList }) => {
     }
     
     const showOverlay = () => {
-        console.log("Overlay shwon")
         setOverlayVisibility(true)
         enableScroll()
         disableOverlay()
