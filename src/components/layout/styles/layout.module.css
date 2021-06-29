@@ -1,5 +1,6 @@
 .layout {
     height: 100vh;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
