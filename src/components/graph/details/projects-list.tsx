@@ -12,6 +12,6 @@ interface Props {
 
 export const ProjectsLists: React.FC<Props> = ({ projects }) => (
     <div className={projectsList}>
-        { projects.map(it => <ProjectView project={it}/>) }
+        { projects.map(it => <ProjectView project={it} key={it.name}/>) }
     </div>
 )
