@@ -6,26 +6,26 @@ import get from 'lodash/get'
 import { Trait, Project } from '../lib'
 import { Layout, ContextCenter } from '../components/layout'
 
-import "./global.css"
+import './global.css'
 
 
 class BlogIndex extends React.Component<PageProps> {
-  render() {
-    const traits: Trait[] = get(this, 'props.data.allContentfulTrait.nodes')
-    const projects: Project[] = get(this, 'props.data.allContentfulProject.nodes')
-    const preProcessedBiographyChapters: {content: { content: string }}[] = get(this, 'props.data.allContentfulBiographyChapter.nodes')
-    const biographyChapters = preProcessedBiographyChapters.flatMap(it => it.content.content)
+    render(): JSX.Element {
+        const traits: Trait[] = get(this, 'props.data.allContentfulTrait.nodes')
+        const projects: Project[] = get(this, 'props.data.allContentfulProject.nodes')
+        const preProcessedBiographyChapters: {content: { content: string }}[] = get(this, 'props.data.allContentfulBiographyChapter.nodes')
+        const biographyChapters = preProcessedBiographyChapters.flatMap(it => it.content.content)
 
-    return (
-      <ContextCenter>
-        <Layout 
-          traits={traits}
-          projects={projects}
-          biographyChapters={biographyChapters.reverse()}
-        />
-      </ContextCenter>
-    )
-  }
+        return (
+            <ContextCenter>
+                <Layout 
+                    traits={traits}
+                    projects={projects}
+                    biographyChapters={biographyChapters.reverse()}
+                />
+            </ContextCenter>
+        )
+    }
 }
 
 export default BlogIndex

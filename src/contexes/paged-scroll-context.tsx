@@ -9,8 +9,8 @@ interface Props {
 
 const defaultPayload = {
     enabled: true,
-    enable: () => {},
-    disable: () => {},
+    enable: () => null,
+    disable: () => null,
 }
 
 export const PagedScrollContext = React.createContext<Props>(defaultPayload)

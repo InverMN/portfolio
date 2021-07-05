@@ -31,7 +31,11 @@
     "react-vis-network-graph": "^3.0.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "contentful-import": "^7.9.42",
+    "eslint": "^7.30.0",
+    "eslint-plugin-react": "^7.24.0",
     "netlify-cli": "^2.71.0",
     "vis-network": "^9.0.4"
   },
@@ -56,6 +60,7 @@
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
     "netlify:login": "netlify login",
-    "netlify:deploy": "netlify deploy -d public -p"
+    "netlify:deploy": "netlify deploy -d public -p",
+    "lint:code": "eslint --fix src/**/*.ts src/**/*.tsx"
   }
 }
