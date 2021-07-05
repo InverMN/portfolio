@@ -37,6 +37,11 @@
     "eslint": "^7.30.0",
     "eslint-plugin-react": "^7.24.0",
     "netlify-cli": "^2.71.0",
+    "stylelint": "^13.13.1",
+    "stylelint-color-format": "^1.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "vis-network": "^9.0.4"
   },
   "engines": {
@@ -61,6 +66,8 @@
     "serve": "gatsby serve",
     "netlify:login": "netlify login",
     "netlify:deploy": "netlify deploy -d public -p",
-    "lint:code": "eslint --fix src/**/*.ts src/**/*.tsx"
+    "lint:code": "eslint --fix src/**/*.ts src/**/*.tsx",
+    "lint:styles": "stylelint --fix src/**/*.module.css src/**/*.css",
+    "lint": "yarn lint:code && yarn lint:styles"
   }
 }

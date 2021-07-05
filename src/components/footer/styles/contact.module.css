@@ -1,13 +1,13 @@
 .contact {
-    grid-area: contact;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  grid-area: contact;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }

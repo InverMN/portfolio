@@ -1,26 +1,26 @@
 .wrapper {
-    position: static;
+  position: static;
 
-    display: flex;
-    width: fit-content;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4.5px 5px;
-    gap: 10px;
-    flex: 1 1 100%;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 4.5px 5px;
 }
 
 .typography {
-    position: static;
+  position: static;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    
-    flex: 1 1 100%;
-    order: 0;
-    margin: 0px;
+  flex: 1 1 100%;
+  order: 0;
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: 21px;
 }

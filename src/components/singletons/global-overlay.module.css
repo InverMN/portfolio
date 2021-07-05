@@ -1,8 +1,10 @@
 .global-overlay {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1024;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(1px);
+  position: absolute;
+  z-index: 1024;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1px);
 }

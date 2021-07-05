@@ -1,29 +1,32 @@
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
 .link {
-    cursor: pointer;
-    font-size: 16px;
-    position: relative;
-    transition: left .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    left: 0;
+  position: relative;
+  left: 0;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .link:hover {
-    left: -5px;
+  left: -5px;
 }
 
 .source-code {
-    text-decoration: none;
-    color: whitesmoke;
+  color: whitesmoke;
+  text-decoration: none;
 }
